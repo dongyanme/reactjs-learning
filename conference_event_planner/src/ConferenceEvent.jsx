@@ -139,12 +139,6 @@ const ConferenceEvent = () => {
     const avTotalCost = calculateTotalCost("av");
     const mealsTotalCost = calculateTotalCost("meals");
 
-    const totalCosts = {
-      venue: venueTotalCost,
-      av: avTotalCost,
-      meals: mealsTotalCost
-    };
-
     const navigateToProducts = (idType) => {
         if (idType == '#venue' || idType == '#addons' || idType == '#meals') {
           if (showItems) { // Check if showItems is false
@@ -152,6 +146,11 @@ const ConferenceEvent = () => {
           }
         }
       }
+      const totalCosts = {
+        venue: venueTotalCost,
+        av: avTotalCost,
+        meals: mealsTotalCost
+      };
 
     return (
         <>
